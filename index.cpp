@@ -23,7 +23,7 @@ constexpr size_t index_of(std::tuple<Types...>) {
 }
 
 int main(int argc, char *argv[]) {
-    std::tuple<int, double, char> tup(1, 2.0, 'a');    
+    std::tuple<int, double, char, const char*> tup(1, 2.0, 'a', "hello");
     
     std::cout << index_of<int>(tup) << std::endl;
     std::cout << index_of<double>(tup) << std::endl;
